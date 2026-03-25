@@ -1,0 +1,27 @@
+# Production override configuration
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+  backend:
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+    environment:
+      JAVA_OPTS: >-
+        -XX:+UseContainerSupport
+        -XX:MaxRAMPercentage=75.0
+        -XX:+UseG1GC
+        -XX:+HeapDumpOnOutOfMemoryError
+        -XX:HeapDumpPath=/app/logs
+        -Djava.security.egd=file:/dev/./urandom
+
+  web-admin:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 64M

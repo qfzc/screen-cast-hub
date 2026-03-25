@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker/
+
+# Config
+.env
+.env.*
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+coverage/

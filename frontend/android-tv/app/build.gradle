@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.opencast.screencast'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.opencast.screencast"
+        minSdk 21
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // ExoPlayer for video playback
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+
+    // PDF Viewer
+    implementation 'io.github.oothp:android-pdf-viewer:3.2.0-beta06'
+
+    // QR Code
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.5.2'
+
+    // Retrofit for API calls
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // Room for local storage
+    implementation 'androidx.room:room-runtime:2.5.2'
+    annotationProcessor 'androidx.room:room-compiler:2.5.2'
+
+    // MQTT - AndroidX-compatible fork of Paho Android Service
+    implementation 'com.github.hannesa2:paho.mqtt.android:4.2'
+
+    // Glide for image loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

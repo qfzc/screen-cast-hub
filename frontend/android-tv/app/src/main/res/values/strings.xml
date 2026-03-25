@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">智屏投屏</string>
+    <string name="bind_device">绑定设备</string>
+    <string name="scan_qr_code">请使用手机扫描二维码绑定设备</string>
+    <string name="scan_qr_to_bind">请使用手机APP扫描二维码绑定设备</string>
+    <string name="binding_code">绑定码: %s</string>
+    <string name="device_bound">设备已绑定</string>
+    <string name="waiting_for_content">等待内容发布...</string>
+    <string name="checking_bind_status">正在验证设备绑定状态...</string>
+    <string name="settings">设置</string>
+    <string name="server_address">服务器地址</string>
+    <string name="save">保存</string>
+</resources>

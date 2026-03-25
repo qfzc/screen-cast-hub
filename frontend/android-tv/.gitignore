@@ -1,0 +1,6 @@
+# Dependencies
+.gradle
+.idea
+local.properties
+
+app/build

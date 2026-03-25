@@ -1,0 +1,38 @@
+# Build outputs
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.docker/
+
+# Documentation
+*.md
+docs/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+test/
+tests/
