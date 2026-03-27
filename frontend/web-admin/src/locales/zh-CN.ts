@@ -94,6 +94,7 @@ export default {
     deviceStatus: '设备状态',
     online: '在线',
     offline: '离线',
+    unbound: '未绑定',
     lastHeartbeat: '最后心跳',
     bindSuccess: '设备绑定成功',
     bindFailed: '绑定失败',

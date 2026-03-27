@@ -157,6 +157,11 @@ function getConversionStatusText(status: number) {
   return map[status] || ''
 }
 
+function getMaterialUrl(material: Material | null): string {
+  if (!material) return ''
+  return material.convertedUrl || material.originalUrl
+}
+
 async function fetchData() {
   await materialStore.fetchMaterials({
     page: currentPage.value,

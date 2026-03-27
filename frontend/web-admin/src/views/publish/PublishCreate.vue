@@ -113,6 +113,10 @@
             <a-select-option value="VIDEO">{{ t('content.video') }}</a-select-option>
             <a-select-option value="PDF">{{ t('content.pdf') }}</a-select-option>
           </a-select>
+          <a-button type="link" @click="goToMaterialUpload">
+            <UploadOutlined />
+            {{ t('material.uploadMaterial') }}
+          </a-button>
         </div>
 
         <a-spin :spinning="materialStore.loading">
@@ -164,7 +168,7 @@
 import { ref, reactive, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { message, type FormInstance } from 'ant-design-vue'
-import { PlusOutlined, HolderOutlined, CheckOutlined, FileTextOutlined } from '@ant-design/icons-vue'
+import { PlusOutlined, HolderOutlined, CheckOutlined, FileTextOutlined, UploadOutlined } from '@ant-design/icons-vue'
 import { useI18n } from 'vue-i18n'
 import { useDeviceStore } from '@/store/device'
 import { useMaterialStore } from '@/store/material'
@@ -259,6 +263,10 @@ function confirmMaterialSelect() {
   }
   tempSelectedIds.value = []
   showMaterialDialog.value = false
+}
+
+function goToMaterialUpload() {
+  router.push({ name: 'MaterialUpload' })
 }
 
 async function handleSubmit() {
@@ -367,6 +375,9 @@ onMounted(async () => {
 }
 
 .filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
 }
 

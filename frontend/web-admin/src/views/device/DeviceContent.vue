@@ -130,6 +130,10 @@
             <a-select-option value="VIDEO">{{ t('content.video') }}</a-select-option>
             <a-select-option value="PDF">{{ t('content.pdf') }}</a-select-option>
           </a-select>
+          <a-button type="link" @click="goToMaterialUpload">
+            <UploadOutlined />
+            {{ t('material.uploadMaterial') }}
+          </a-button>
         </div>
 
         <a-spin :spinning="materialStore.loading">
@@ -213,7 +217,7 @@ import {
   HolderOutlined,
   SettingOutlined,
   DeleteOutlined,
-  CheckOutlined
+  UploadOutlined
 } from '@ant-design/icons-vue'
 
 const { t } = useI18n()
@@ -359,6 +363,10 @@ function confirmMaterialSelect() {
   }
   tempSelectedIds.value = []
   showMaterialDialog.value = false
+}
+
+function goToMaterialUpload() {
+  router.push({ name: 'MaterialUpload' })
 }
 
 function removeItem(index: number) {
@@ -563,6 +571,9 @@ onMounted(async () => {
 }
 
 .filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
 }
 

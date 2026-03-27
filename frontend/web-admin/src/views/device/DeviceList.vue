@@ -16,7 +16,8 @@
         <a-select v-model:value="filterStatus" :placeholder="t('device.deviceStatus')" allowClear style="width: 120px" @change="handleFilter">
           <a-select-option :value="undefined">{{ t('common.all') }}</a-select-option>
           <a-select-option :value="1">{{ t('device.online') }}</a-select-option>
-          <a-select-option :value="0">{{ t('device.offline') }}</a-select-option>
+          <a-select-option :value="2">{{ t('device.offline') }}</a-select-option>
+          <a-select-option :value="0">{{ t('device.unbound') }}</a-select-option>
         </a-select>
         <a-input-search
           v-model:value="searchKeyword"
@@ -44,8 +45,8 @@
             </a-button>
           </template>
           <template v-if="column.key === 'status'">
-            <a-tag :color="record.status === 1 ? 'green' : 'default'">
-              {{ record.status === 1 ? t('device.online') : t('device.offline') }}
+            <a-tag :color="getStatusColor(record.status)">
+              {{ getStatusText(record.status) }}
             </a-tag>
           </template>
           <template v-if="column.key === 'lastHeartbeat'">
@@ -158,6 +159,24 @@ const renameRules = computed(() => ({
 function formatTime(time: string) {
   if (!time) return '-'
   return new Date(time).toLocaleString('zh-CN')
+}
+
+function getStatusColor(status: number): string {
+  const colorMap: Record<number, string> = {
+    0: 'default',
+    1: 'green',
+    2: 'orange'
+  }
+  return colorMap[status] ?? 'default'
+}
+
+function getStatusText(status: number): string {
+  const textMap: Record<number, string> = {
+    0: t('device.unbound'),
+    1: t('device.online'),
+    2: t('device.offline')
+  }
+  return textMap[status] ?? t('device.unbound')
 }
 
 async function fetchData() {

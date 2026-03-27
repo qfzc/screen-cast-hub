@@ -94,6 +94,7 @@ export default {
     deviceStatus: 'Device Status',
     online: 'Online',
     offline: 'Offline',
+    unbound: 'Unbound',
     lastHeartbeat: 'Last Heartbeat',
     bindSuccess: 'Device bound successfully',
     bindFailed: 'Binding failed',

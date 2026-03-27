@@ -1,48 +1,48 @@
-# Screen Cast Hub - 智屏管理系统
+# Screen Cast Hub - Smart Display Management System
 
-[English](./README.en.md) | **简体中文**
+**简体中文** | [English](./README.zh.md)
 
-> 面向企业展厅、门店展示等场景的多屏内容管理系统
+> A multi-screen content management system designed for enterprise showrooms, retail displays, and digital signage scenarios
 
-## 产品简介
+## Overview
 
-**"一屏一码，扫码即管"** 的轻量化设备管理方案。
+A lightweight device management solution built around the principle of **"One Screen, One Code - Scan to Manage"**.
 
-### 核心特性
+### Key Features
 
-- 📱 **扫码绑定** - TV端显示二维码，后台扫码即可绑定设备
-- 📤 **远程发布** - 支持图片、视频、PPT、PDF等多种素材远程发布
-- 🔄 **自动转码** - PPT自动转换为PDF，TV端直接播放 (开发中)
-- 💾 **本地播放** - 内容下发后本地存储，无需手机在线
-- 📊 **多屏管理** - 统一管理多个设备，分组展示
+- 📱 **QR Code Binding** - TV displays a QR code; scan from the admin panel to instantly bind the device
+- 📤 **Remote Publishing** - Push images, videos, PPTs, PDFs, and other media assets remotely
+- 🔄 **Auto-Transcoding** - PPT files automatically convert to PDF for seamless TV playback (Coming Soon)
+- 💾 **Local Playback** - Content downloads to device storage; no continuous phone connection required
+- 📊 **Multi-Screen Management** - Centralized control of multiple devices with group organization
 
-### 与传统投屏的区别
+### Why Not Traditional Casting?
 
-| 对比项 | 本方案 | 传统投屏(AirPlay/DLNA) |
-|--------|--------|----------------------|
-| 手机依赖 | 内容下发后可离线 | 需保持在线 |
-| 多设备管理 | 集中式管理 | 点对点，难管理 |
-| 文档支持 | PPT自动转PDF播放 | 不支持或体验差 |
-| 网络要求 | 仅下发时需要 | 持续需要 |
+| Comparison | This Solution | Traditional Casting (AirPlay/DLNA) |
+|------------|---------------|-----------------------------------|
+| Phone Dependency | Works offline after content delivery | Requires constant connection |
+| Multi-Device Mgmt | Centralized dashboard | Point-to-point, hard to manage |
+| Document Support | PPT auto-converts to PDF | Poor or no support |
+| Network Requirements | Only needed during publishing | Required continuously |
 
 ---
 
-## 系统截图
+## Screenshots
 
-### 设备管理
-<img src="./assets/deviceinfo.png" alt="设备信息" width="600" />
+### Device Management
+<img src="./assets/deviceinfo.png" alt="Device Info" width="600" />
 
-### 素材管理
-<img src="./assets/material.png" alt="素材管理" width="600" />
+### Asset Management
+<img src="./assets/material.png" alt="Material Management" width="600" />
 
-### 内容发布
-<img src="./assets/upload.png" alt="内容上传" width="600" />
+### Content Publishing
+<img src="./assets/upload.png" alt="Content Upload" width="600" />
 
-### 排序功能
-<img src="./assets/sort.png" alt="排序功能" width="600" />
+### Sorting Feature
+<img src="./assets/sort.png" alt="Sorting" width="600" />
 
-### 系统设置
-<img src="./assets/setting.png" alt="系统设置" width="600" />
+### System Settings
+<img src="./assets/setting.png" alt="System Settings" width="600" />
 
 ### TV
 <img src="./assets/tv_bind.png" alt="绑定码" width="600" />
@@ -50,105 +50,105 @@
 
 ---
 
-## 项目结构
+## Project Structure
 
 ```
 screen-cast-hub/
-├── backend/           # 后端服务 (Spring Boot 单体应用)
-├── android-tv/        # Android TV 客户端 (Java)
-├── web-admin/         # PC 管理后台 (Vue 3 + Ant Design Vue)
+├── backend/           # Backend Service (Spring Boot Monolith)
+├── android-tv/        # Android TV Client (Java)
+├── web-admin/         # PC Admin Dashboard (Vue 3 + Ant Design Vue)
 └── README.md
 ```
 
 ---
 
-## 技术栈
+## Tech Stack
 
-### 后端服务 (backend/)
+### Backend Service (`backend/`)
 
-| 技术 | 版本 | 说明 |
-|------|------|------|
-| Spring Boot | 3.2 | 基础框架 |
-| Spring Security | - | 认证授权 |
-| JWT | - | Token 认证 |
-| MyBatis Plus | - | ORM 框架 |
-| MySQL | 8.0 | 主数据库 |
-| Redis | 7.0 | 缓存 |
-| MinIO | - | 文件存储 |
-| EMQX | - | MQTT 消息 |
-| Gotenberg | - | PPT 转 PDF |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Spring Boot | 3.2 | Core framework |
+| Spring Security | - | Authentication & authorization |
+| JWT | - | Token-based auth |
+| MyBatis Plus | - | ORM framework |
+| MySQL | 8.0 | Primary database |
+| Redis | 7.0 | Caching layer |
+| MinIO | - | Object storage |
+| EMQX | - | MQTT messaging |
+| Gotenberg | - | PPT to PDF conversion |
 
-**包结构：**
+**Package Structure:**
 ```
 com.opencast.screencast/
-├── config/           # 配置类
-├── constant/         # 常量
-├── controller/       # 控制器
-├── dto/              # DTO 对象
-├── entity/           # 实体类
-├── enums/            # 枚举
-├── exception/        # 异常处理
-├── mapper/           # Mapper 接口
-├── result/           # 结果封装
-├── service/          # 业务服务
-└── util/             # 工具类
+├── config/           # Configuration classes
+├── constant/         # Constants
+├── controller/       # REST controllers
+├── dto/              # Data Transfer Objects
+├── entity/           # Entity classes
+├── enums/            # Enumerations
+├── exception/        # Exception handling
+├── mapper/           # MyBatis mappers
+├── result/           # Response wrappers
+├── service/          # Business logic
+└── util/             # Utility classes
 ```
 
-### PC 管理后台 (web-admin/)
+### PC Admin Dashboard (`web-admin/`)
 
-| 技术 | 版本 | 说明 |
-|------|------|------|
-| Vue | 3.4 | 前端框架 |
-| Ant Design Vue | 4.2 | UI 组件库 |
-| Pinia | 2.1 | 状态管理 |
-| Vue Router | 4.2 | 路由 |
-| Vite | 5.0 | 构建工具 |
-| TypeScript | 5.6 | 类型支持 |
-| Axios | 1.6 | HTTP 客户端 |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Vue | 3.4 | Frontend framework |
+| Ant Design Vue | 4.2 | UI component library |
+| Pinia | 2.1 | State management |
+| Vue Router | 4.2 | Routing |
+| Vite | 5.0 | Build tooling |
+| TypeScript | 5.6 | Type safety |
+| Axios | 1.6 | HTTP client |
 
-**功能模块：**
-- 登录认证
-- 设备管理（绑定、重命名、解绑）
-- 素材管理（上传、预览、删除）
-- 内容发布（创建任务、查看记录）
-- 仪表盘（统计概览）
+**Feature Modules:**
+- Authentication & login
+- Device management (bind, rename, unbind)
+- Asset management (upload, preview, delete)
+- Content publishing (create tasks, view history)
+- Dashboard (statistics overview)
 
-**开发端口：** `5173`
+**Development Port:** `5173`
 
-### Android TV 客户端 (android-tv/)
+### Android TV Client (`android-tv/`)
 
-| 技术 | 版本 | 说明 |
-|------|------|------|
-| Java | 8+ | 开发语言 |
-| ExoPlayer | - | 视频播放 |
-| AndroidPdfViewer | - | PDF 播放 |
-| Glide | - | 图片加载 |
-| Retrofit | - | 网络请求 |
-| Room | - | 本地存储 |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Java | 8+ | Primary language |
+| ExoPlayer | - | Video playback |
+| AndroidPdfViewer | - | PDF rendering |
+| Glide | - | Image loading |
+| Retrofit | - | Network requests |
+| Room | - | Local database |
 
-**功能模块：**
-- 设备绑定（显示二维码）
-- 内容接收（MQTT）
-- 本地播放（图片轮播、视频、PDF）
-- 心跳上报
+**Feature Modules:**
+- Device binding (QR code display)
+- Content reception (MQTT)
+- Local playback (image slideshow, video, PDF)
+- Heartbeat reporting
 
 ---
 
-## 快速开始
+## Quick Start
 
-### 1. 后端启动
+### 1. Start the Backend
 
 ```bash
 cd backend
 
-# 配置数据库
-# 修改 src/main/resources/application.yml
+# Configure database
+# Edit src/main/resources/application.yml
 
-# 启动
+# Run
 mvn spring-boot:run
 ```
 
-### 2. PC 管理后台启动
+### 2. Start the Admin Dashboard
 
 ```bash
 cd web-admin
@@ -156,12 +156,9 @@ npm install
 npm run dev
 ```
 
-访问：http://localhost:5173
+Access at: http://localhost:5173
 
-
-访问：http://localhost:5174
-
-### 3. Android TV 构建
+### 3. Build Android TV App
 
 ```bash
 cd android-tv
@@ -170,28 +167,26 @@ cd android-tv
 
 ---
 
-## 开发计划
+## Roadmap
 
-### 待开发功能
+### Upcoming Features
 
-| 功能 | 状态 | 说明 |
-|------|------|------|
-| PPT 转 PDF | 📋 计划中 | 集成 Gotenberg 服务，实现 PPT 自动转 PDF |
+| Feature | Status | Description |
+|---------|--------|-------------|
+| PPT to PDF | 📋 Planned | Integrate Gotenberg service for automatic PPT-to-PDF conversion |
 
 ---
 
-## 联系我
+## Contact
 
 📧 Email: liang.qfzc@gmail.com
 
-微信：
+WeChat:
 
-<img src="./assets/wechat-contact.jpg" alt="微信联系方式" width="200" />
+<img src="./assets/wechat-contact.jpg" alt="WeChat Contact" width="200" />
 
 ---
 
 ## License
 
 MIT
-
-![Visitors](https://api.visitorbadge.io/api/visitors?path=qfzc/screen-cast-hub&label=VISITORS&labelColor=%23555555&countColor=%23263159&style=flat)
