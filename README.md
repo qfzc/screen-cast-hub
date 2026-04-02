@@ -4,6 +4,8 @@
 
 > A multi-screen content management system designed for enterprise showrooms, retail displays, and digital signage scenarios
 
+🌐 **Official Website:** [https://www.hdcase.tech/](https://www.hdcase.tech/) — SaaS Service Available
+
 ## Overview
 
 A lightweight device management solution built around the principle of **"One Screen, One Code - Scan to Manage"**.
