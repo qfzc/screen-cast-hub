@@ -4,8 +4,6 @@
 
 > 面向企业展厅、门店展示等场景的多屏内容管理系统
 
-🌐 **官网：** [https://www.hdcase.tech/](https://www.hdcase.tech/) — 提供 SaaS 云服务
-
 ## 💡 自建 vs 云服务
 
 | 方式 | 说明 |

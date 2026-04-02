@@ -4,8 +4,6 @@
 
 > A multi-screen content management system designed for enterprise showrooms, retail displays, and digital signage scenarios
 
-🌐 **Official Website:** [https://www.hdcase.tech/](https://www.hdcase.tech/) — SaaS Service Available
-
 ## 💡 Self-hosted vs Cloud Service
 
 | Option | Description |
