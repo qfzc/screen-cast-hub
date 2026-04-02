@@ -6,6 +6,15 @@
 
 🌐 **Official Website:** [https://www.hdcase.tech/](https://www.hdcase.tech/) — SaaS Service Available
 
+## 💡 Self-hosted vs Cloud Service
+
+| Option | Description |
+|--------|-------------|
+| **Self-hosted** | Free & open source (MIT), full control over your data and infrastructure |
+| **SaaS Cloud** | No server management required — get started instantly at [hdcase.tech](https://www.hdcase.tech/) |
+
+**Don't want to manage servers?** Try our [cloud service](https://www.hdcase.tech/) for a hassle-free experience.
+
 ## Overview
 
 A lightweight device management solution built around the principle of **"One Screen, One Code - Scan to Manage"**.
