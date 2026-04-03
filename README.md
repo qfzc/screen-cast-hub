@@ -8,10 +8,10 @@
 
 | Option | Description |
 |--------|-------------|
-| **Self-hosted** | Open source (MIT), full control over your data and infrastructure |
-| **SaaS Cloud** | 🎉 **Free to use** — no server setup, get started instantly at [hdcase.tech](https://www.hdcase.tech/) |
+| **Self-hosted** | Free & open source (MIT), full control over your data and infrastructure |
+| **SaaS Cloud** | No server management required — get started instantly at [hdcase.tech](https://www.hdcase.tech/) |
 
-**🚀 Quick start?** Try our [cloud service](https://www.hdcase.tech/) — completely free, no credit card required.
+**Don't want to manage servers?** Try our [cloud service](https://www.hdcase.tech/) for a hassle-free experience.
 
 ## Overview
 
