@@ -203,4 +203,3 @@ cd android-tv
 
 MIT
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=qfzc/screen-cast-hub&label=VISITORS&labelColor=%23555555&countColor=%23263159&style=flat)
